@@ -1,0 +1,1 @@
+Fast search in sorted arrays. The implementation is based on combing brute force search and interpolation search.
