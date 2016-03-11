@@ -1,5 +1,4 @@
 module.exports = (sorted, toFind, from, len)->
-  # Возвращает индекс элемента со значением toFind или -1, если такого элемента не существует
   mid  = null
   low  = from
   high = len - 1
@@ -11,7 +10,7 @@ module.exports = (sorted, toFind, from, len)->
   gotLow  = getLow()
   while (gotLow < toFind and gotHigh > toFind)
     mult = (high - low) / (gotHigh - gotLow)
-    mid = low + mult * (toFind - gotLow)
+    mid = Math.floor low + mult * (toFind - gotLow)
     gotMid = getMid()
 
     if gotMid < toFind
