@@ -1,7 +1,8 @@
 findPrev      = require './findPrev'
 interpSearch  = require './interpolationSearch'
 
-module.exports = (arr, val)->
-  if arr.length < 40
-    findPrev(arr, val)
-  else interpSearch(arr, val)
+module.exports = (arr, val, from = 0)->
+  len = arr.length
+  if len < 40
+    findPrev(arr, val, from, len)
+  else interpSearch(arr, val, from, len)

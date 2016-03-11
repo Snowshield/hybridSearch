@@ -1,5 +1,5 @@
-module.exports = (arr, val)->
-  len = arr.length ; i = 0
+module.exports = (arr, val, from, len)->
+  i = from
   while i < len
     elem = arr[i]
     if elem is val

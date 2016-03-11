@@ -1,8 +1,8 @@
-module.exports = (sorted, toFind)->
+module.exports = (sorted, toFind, from, len)->
   # Возвращает индекс элемента со значением toFind или -1, если такого элемента не существует
-  mid = null
-  low  = 0
-  high = sorted.length - 1
+  mid  = null
+  low  = from
+  high = len - 1
   getHigh = -> sorted[high]
   getLow  = -> sorted[low]
   getMid  = -> sorted[mid]
